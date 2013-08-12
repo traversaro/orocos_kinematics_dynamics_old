@@ -24,6 +24,11 @@ IF ( PKG_CONFIG_FOUND )
   set(Orocos-KDL_LIBRARY_RELEASE "orocos-kdl")
   set(Orocos-KDL_LIBRARY_DEBUG "orocos-kdld")
   set(Orocos-KDL_LIBRARIES optimized "${Orocos-KDL_LIBRARY_RELEASE}" debug "${Orocos-KDL_LIBRARY_DEBUG}")
+
+  IF(MSVC)
+     set(CMAKE_DEBUG_POSTFIX "d")
+  ENDIF(MSVC)
+
   set(Orocos-KDL_FOUND TRUE)
   IF( Orocos-KDL_FOUND )
     IF(NOT Orocos-KDL_FIND_QUIETLY)

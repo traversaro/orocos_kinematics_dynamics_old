@@ -47,6 +47,6 @@ IF ( PKG_CONFIG_FOUND )
   ENDIF ( Orocos-KDL_FOUND )
 ELSE  ( PKG_CONFIG_FOUND )
 
-  MESSAGE( FATAL_ERROR "Can't find KDL without pkgconfig !")
+MESSAGE( FATAL_ERROR "Can't find KDL without pkgconfig !")
 
 ENDIF ( PKG_CONFIG_FOUND )

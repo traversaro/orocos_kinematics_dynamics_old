@@ -1,52 +1,23 @@
 # Locate KDL install directory
 
 # This module defines
-# Orocos-KDL_INSTALL where to find include, lib, bin, etc.
+# Orocos-KDL_INCLUDE_DIRS
+# Orocos-KDL_LIBRARIES
 # Orocos-KDL_FOUND, is set to true
 
-INCLUDE (FindPkgConfig)
+if(NOT Orocos-KDL_FOUND)
+    message( "Looking for KDL in: @CMAKE_INSTALL_PREFIX@")
 
-IF ( PKG_CONFIG_FOUND )
+  # Version
+  set(Orocos-KDL_VERSION_MAJOR "@KDL_VERSION_MAJOR@")
+  set(Orocos-KDL_VERSION_MINOR "@KDL_VERSION_MINOR@")
+  set(Orocos-KDL_VERSION_PATCH "@KDL_VERSION_PATCH@")
 
-  # set flag for whether items are required or not
-  SET(IS_REQUIRED)
-  IF (Orocos-KDL_FIND_REQUIRED)
-	SET(IS_REQUIRED "REQUIRED")
-  ENDIF (Orocos-KDL_FIND_REQUIRED)
-
-  find_package(Eigen3 3.0 QUIET)
-  # find KDL itself
-  #set(ENV{PKG_CONFIG_PATH} "@CMAKE_INSTALL_PREFIX@/lib/pkgconfig/")
-  message( "Looking for KDL in: @CMAKE_INSTALL_PREFIX@")
-  #pkg_search_module(Orocos-KDL ${IS_REQUIRED} orocos-kdl)
-  set(Orocos-KDL_INCLUDE_DIRS "@CMAKE_INSTALL_PREFIX@/include ${Eigen3_INCLUDE_DIRS}" )
+  set(Orocos-KDL_INCLUDE_DIRS "@CMAKE_INSTALL_PREFIX@/include" "${Eigen3_INCLUDE_DIR}" )
   set(Orocos-KDL_LIBRARY_DIRS "@CMAKE_INSTALL_PREFIX@/lib" )
-  set(Orocos-KDL_LIBRARY_RELEASE "orocos-kdl")
-  set(Orocos-KDL_LIBRARY_DEBUG "orocos-kdld")
-  set(Orocos-KDL_LIBRARIES optimized "${Orocos-KDL_LIBRARY_RELEASE}" debug "${Orocos-KDL_LIBRARY_DEBUG}")
-
-  IF(MSVC)
-     set(CMAKE_DEBUG_POSTFIX "d")
-  ENDIF(MSVC)
-
+  set(Orocos-KDL_LIBRARIES orocos-kdl)
+  include(${CMAKE_CURRENT_LIST_DIR}/orocos-kdl-target.cmake)
   set(Orocos-KDL_FOUND TRUE)
-  IF( Orocos-KDL_FOUND )
-    IF(NOT Orocos-KDL_FIND_QUIETLY)
-      message(STATUS "   Includes in: ${Orocos-KDL_INCLUDE_DIRS}")
-      message(    "Compiler flags: ${Orocos-KDL_CFLAGS}")  
-      message("   Libraries: ${Orocos-KDL_LIBRARIES}")
-      message("   Libraries in: ${Orocos-KDL_LIBRARY_DIRS}")
-      message("   Linker flags : ${Orocos-KDL_LD_FLAGS}")
-      message("   Defines: ${Orocos-KDL_DEFINES}")
-    ENDIF(NOT Orocos-KDL_FIND_QUIETLY)
 
-  ELSE(Orocos-KDL_FOUND)  
-    IF(Orocos-KDL_FIND_REQUIRED)
-      MESSAGE(FATAL_ERROR "Could not find KDL")
-    ENDIF(Orocos-KDL_FIND_REQUIRED)
-  ENDIF ( Orocos-KDL_FOUND )
-ELSE  ( PKG_CONFIG_FOUND )
+endif(NOT Orocos-KDL_FOUND)
 
-MESSAGE( FATAL_ERROR "Can't find KDL without pkgconfig !")
-
-ENDIF ( PKG_CONFIG_FOUND )

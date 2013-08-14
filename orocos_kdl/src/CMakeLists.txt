@@ -3,28 +3,20 @@ FILE( GLOB KDL_HPPS [^.]*.hpp [^.]*.inl)
 
 FILE( GLOB UTIL_SRCS utilities/[^.]*.cpp utilities/[^.]*.cxx)
 FILE( GLOB UTIL_HPPS utilities/[^.]*.h utilities/[^.]*.hpp)
-
-
-IF( WIN32 )
-  SET(KDL_BUILD_SHARED_LIBRARY OFF )
-ELSE( WIN32 )
-  SET(KDL_BUILD_SHARED_LIBRARY ON )
-ENDIF( WIN32 )
-
-IF( KDL_BUILD_SHARED_LIBRARY ) 
-  ADD_LIBRARY(orocos-kdl SHARED ${KDL_SRCS} ${UTIL_SRCS})
-ELSE()
-  ADD_LIBRARY(orocos-kdl STATIC ${KDL_SRCS} ${UTIL_SRCS})
-ENDIF()
-
+if(MSVC)
+    set(LIB_TYPE STATIC)
+else()
+    set(LIB_TYPE SHARED)
+endif()
+ADD_LIBRARY(orocos-kdl ${LIB_TYPE} ${KDL_SRCS} ${UTIL_SRCS})
 SET_TARGET_PROPERTIES( orocos-kdl PROPERTIES
   SOVERSION "${KDL_VERSION_MAJOR}.${KDL_VERSION_MINOR}"
   VERSION "${KDL_VERSION}"
   COMPILE_FLAGS "${CMAKE_CXX_FLAGS_ADD} ${KDL_CFLAGS}"
   INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/lib")
 
-INSTALL_TARGETS( /lib orocos-kdl)
-
+#INSTALL_TARGETS( /lib orocos-kdl)
+INSTALL(TARGETS orocos-kdl EXPORT orocos-kdl-target DESTINATION lib)
 # CMake 2.2:
 INSTALL_FILES( /include/kdl FILES ${KDL_HPPS})
 INSTALL_FILES( /include/kdl/utilities FILES ${UTIL_HPPS})

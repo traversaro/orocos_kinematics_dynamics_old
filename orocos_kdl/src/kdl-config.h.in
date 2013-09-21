@@ -1,0 +1,53 @@
+#ifndef KDL_CONFIG_H
+#define KDL_CONFIG_H
+
+#define KDL_VERSION       @KDL_VERSION@
+#define KDL_VERSION_MAJOR @KDL_VERSION_MAJOR@
+#define KDL_VERSION_MINOR @KDL_VERSION_MINOR@
+#define KDL_VERSION_PATCH @KDL_VERSION_PATCH@
+
+
+//
+// See: <http://gcc.gnu.org/wiki/Visibility>
+//
+//Note by traversaro, 21/09/2013: I don't know if this is used, but I keep it for consistency with RTT and OCL
+#cmakedefine KDL_GCC_HASVISIBILITY
+#if defined(__GNUG__) && defined(KDL_GCC_HASVISIBILITY) && (defined(__unix__) || defined(__APPLE__))
+
+# if defined(KDL_DLL_EXPORT)
+   // Use KDL_API for normal function exporting
+#  define KDL_API    __attribute__((visibility("default")))
+
+   // Use KDL_EXPORT for static template class member variables
+   // They must always be 'globally' visible.
+#  define KDL_EXPORT __attribute__((visibility("default")))
+
+   // Use KDL_HIDE to explicitly hide a symbol
+#  define KDL_HIDE   __attribute__((visibility("hidden")))
+
+# else
+#  define KDL_API
+#  define KDL_EXPORT __attribute__((visibility("default")))
+#  define KDL_HIDE   __attribute__((visibility("hidden")))
+# endif
+
+#else
+   // Win32 and NOT GNU
+# if defined( WIN32 ) && !defined ( __MINGW32__ )
+#  if defined(KDL_DLL_EXPORT)
+#   define KDL_API    __declspec(dllexport)
+#   define KDL_EXPORT __declspec(dllexport)
+#   define KDL_HIDE   
+#  else
+#   define KDL_API	 __declspec(dllimport)
+#   define KDL_EXPORT __declspec(dllexport)
+#   define KDL_HIDE 
+#  endif
+# else
+#  define KDL_API
+#  define KDL_EXPORT
+#  define KDL_HIDE
+# endif
+#endif
+
+#endif

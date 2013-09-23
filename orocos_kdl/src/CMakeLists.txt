@@ -22,7 +22,10 @@ SET_TARGET_PROPERTIES( orocos-kdl
 INSTALL(TARGETS orocos-kdl EXPORT orocos-kdl-target DESTINATION lib)
 
 #Configure the file for proper symbol exporting in Windows
-CONFIGURE_FILE( kdl-config.h.in kdl-config.h @ONLY)
+CONFIGURE_FILE( ${PROJ_SOURCE_DIR}/src/kdl-config.h.in ${PROJ_BINARY_DIR}/src/kdl-config.h @ONLY)
+
+# Due to generation of some .h files in build directories, we also need to include some build dirs in our include paths.
+INCLUDE_DIRECTORIES(${PROJ_BINARY_DIR}/src/)
 
 # CMake 2.2:
 INSTALL_FILES( /include/kdl FILES ${KDL_HPPS} kdl-config.h)

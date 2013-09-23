@@ -28,7 +28,7 @@ CONFIGURE_FILE( ${PROJ_SOURCE_DIR}/src/kdl-config.h.in ${PROJ_BINARY_DIR}/src/kd
 INCLUDE_DIRECTORIES(${PROJ_BINARY_DIR}/src/)
 
 # CMake 2.2:
-INSTALL_FILES( /include/kdl FILES ${KDL_HPPS} kdl-config.h)
+INSTALL_FILES( /include/kdl FILES ${KDL_HPPS} ${PROJ_BINARY_DIR}/src/kdl-config.h)
 INSTALL_FILES( /include/kdl/utilities FILES ${UTIL_HPPS})
 
 # Orocos convention:

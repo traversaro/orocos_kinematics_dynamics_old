@@ -28,13 +28,15 @@
 #include <string>
 #include <map>
 
+#include "kdl-config.h"
+
 namespace KDL
 {
     //Forward declaration
     class TreeElement;
     typedef std::map<std::string,TreeElement> SegmentMap;
 
-    class TreeElement
+    class KDL_API TreeElement
     {
     private:
         TreeElement(const std::string& name):segment(name), q_nr(0)
@@ -62,7 +64,7 @@ namespace KDL
      *
      * @ingroup KinematicFamily
      */
-    class Tree
+    class KDL_API Tree
     {
     private:
         SegmentMap segments;

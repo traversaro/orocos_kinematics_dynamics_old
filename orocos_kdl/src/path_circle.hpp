@@ -48,6 +48,7 @@
 #include "path.hpp"
 #include "rotational_interpolation.hpp"
 
+#include "kdl-config.h"
 
 namespace KDL {
 
@@ -57,7 +58,7 @@ namespace KDL {
 	 * have been a better name though.
 	 * @ingroup Motion
 	 */
-class Path_Circle : public Path
+class KDL_API Path_Circle : public Path
 	{
 
 		// Orientatie gedeelte

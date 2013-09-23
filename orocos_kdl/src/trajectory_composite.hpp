@@ -21,6 +21,7 @@
 #include "path_composite.hpp"
 #include <vector>
 
+#include "kdl-config.h"
 
 
 namespace KDL {
@@ -29,7 +30,7 @@ namespace KDL {
    * of underlying trajectoria.  Call Add to add a trajectory
    * @ingroup Motion
    */
-class Trajectory_Composite: public Trajectory
+class KDL_API Trajectory_Composite: public Trajectory
 	{
 		typedef std::vector<Trajectory*> VectorTraj;
 		typedef std::vector<double>         VectorDouble;

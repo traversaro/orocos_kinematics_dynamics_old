@@ -3,6 +3,8 @@
 #ifndef KDL_CHAIN_IKSOLVERVEL_PINV_GIVENS_HPP
 #define KDL_CHAIN_IKSOLVERVEL_PINV_GIVENS_HPP
 
+#include "kdl-config.h"
+
 #include "chainiksolver.hpp"
 #include "chainjnttojacsolver.hpp"
 
@@ -21,7 +23,7 @@ namespace KDL
      *
      * @ingroup KinematicFamily
      */
-    class ChainIkSolverVel_pinv_givens : public ChainIkSolverVel
+    class KDL_API ChainIkSolverVel_pinv_givens : public ChainIkSolverVel
     {
     public:
         /**

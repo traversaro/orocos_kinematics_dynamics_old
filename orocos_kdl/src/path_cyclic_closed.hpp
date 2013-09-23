@@ -49,6 +49,8 @@
 #include "path.hpp"
 #include <vector>
 
+#include "kdl-config.h"
+
 
 namespace KDL {
 
@@ -57,7 +59,7 @@ namespace KDL {
 	  * which is traversed a number of times.
 	  * @ingroup Motion
 	  */
-	 class Path_Cyclic_Closed : public Path
+	 class KDL_API Path_Cyclic_Closed : public Path
 	{
 		int times;
 		Path* geom;

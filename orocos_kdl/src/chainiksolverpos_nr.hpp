@@ -22,6 +22,8 @@
 #ifndef KDLCHAINIKSOLVERPOS_NR_HPP
 #define KDLCHAINIKSOLVERPOS_NR_HPP
 
+#include "kdl-config.h"
+
 #include "chainiksolver.hpp"
 #include "chainfksolver.hpp"
 
@@ -35,7 +37,7 @@ namespace KDL {
      *
      * @ingroup KinematicFamily
      */
-    class ChainIkSolverPos_NR : public ChainIkSolverPos
+    class KDL_API ChainIkSolverPos_NR : public ChainIkSolverPos
     {
     public:
         /**

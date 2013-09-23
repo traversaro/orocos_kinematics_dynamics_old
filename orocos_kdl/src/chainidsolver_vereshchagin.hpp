@@ -22,6 +22,8 @@
 #ifndef KDL_CHAINIDSOLVER_VERESHCHAGIN_HPP
 #define KDL_CHAINIDSOLVER_VERESHCHAGIN_HPP
 
+#include "kdl-config.h"
+
 #include "chainidsolver.hpp"
 #include "frames.hpp"
 #include "articulatedbodyinertia.hpp"
@@ -40,7 +42,7 @@ typedef Eigen::Matrix<double, 6, 1 > Vector6d;
 typedef Eigen::Matrix<double, 6, 6 > Matrix6d;
 typedef Eigen::Matrix<double, 6, Eigen::Dynamic> Matrix6Xd;
 
-class ChainIdSolver_Vereshchagin
+class KDL_API ChainIdSolver_Vereshchagin
 {
 public:
     /**

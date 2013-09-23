@@ -12,11 +12,13 @@
 #include "treejnttojacsolver.hpp"
 #include <Eigen/Core>
 
+#include "kdl-config.h"
+
 namespace KDL {
 
     using namespace Eigen;
 
-    class TreeIkSolverVel_wdls: public TreeIkSolverVel {
+    class KDL_API TreeIkSolverVel_wdls: public TreeIkSolverVel {
     public:
         TreeIkSolverVel_wdls(const Tree& tree, const std::vector<std::string>& endpoints);
         virtual ~TreeIkSolverVel_wdls();

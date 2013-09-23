@@ -33,25 +33,28 @@
 #include "tree.hpp"
 #include "jntspaceinertiamatrix.hpp"
 
+#include "kdl-config.h"
+
+
 namespace KDL {
-std::ostream& operator <<(std::ostream& os, const Joint& joint);
-std::istream& operator >>(std::istream& is, Joint& joint);
-std::ostream& operator <<(std::ostream& os, const Segment& segment);
-std::istream& operator >>(std::istream& is, Segment& segment);
-std::ostream& operator <<(std::ostream& os, const Chain& chain);
-std::istream& operator >>(std::istream& is, Chain& chain);
+KDL_API std::ostream& operator <<(std::ostream& os, const Joint& joint);
+KDL_API std::istream& operator >>(std::istream& is, Joint& joint);
+KDL_API std::ostream& operator <<(std::ostream& os, const Segment& segment);
+KDL_API std::istream& operator >>(std::istream& is, Segment& segment);
+KDL_API std::ostream& operator <<(std::ostream& os, const Chain& chain);
+KDL_API std::istream& operator >>(std::istream& is, Chain& chain);
 
-std::ostream& operator <<(std::ostream& os, const Tree& tree);
-std::istream& operator >>(std::istream& is, Tree& tree);
+KDL_API std::ostream& operator <<(std::ostream& os, const Tree& tree);
+KDL_API std::istream& operator >>(std::istream& is, Tree& tree);
 
-std::ostream& operator <<(std::ostream& os, SegmentMap::const_iterator it);
+KDL_API std::ostream& operator <<(std::ostream& os, SegmentMap::const_iterator it);
 
-std::ostream& operator <<(std::ostream& os, const JntArray& array);
-std::istream& operator >>(std::istream& is, JntArray& array);
-std::ostream& operator <<(std::ostream& os, const Jacobian& jac);
-std::istream& operator >>(std::istream& is, Jacobian& jac);
-std::ostream& operator <<(std::ostream& os, const JntSpaceInertiaMatrix& jntspaceinertiamatrix);
-std::istream& operator >>(std::istream& is, JntSpaceInertiaMatrix& jntspaceinertiamatrix);
+KDL_API std::ostream& operator <<(std::ostream& os, const JntArray& array);
+KDL_API std::istream& operator >>(std::istream& is, JntArray& array);
+KDL_API std::ostream& operator <<(std::ostream& os, const Jacobian& jac);
+KDL_API std::istream& operator >>(std::istream& is, Jacobian& jac);
+KDL_API std::ostream& operator <<(std::ostream& os, const JntSpaceInertiaMatrix& jntspaceinertiamatrix);
+KDL_API std::istream& operator >>(std::istream& is, JntSpaceInertiaMatrix& jntspaceinertiamatrix);
 
     /*
 template<typename T>

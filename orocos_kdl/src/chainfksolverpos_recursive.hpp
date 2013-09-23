@@ -22,6 +22,8 @@
 #ifndef KDLCHAINFKSOLVERPOS_RECURSIVE_HPP
 #define KDLCHAINFKSOLVERPOS_RECURSIVE_HPP
 
+#include "kdl-config.h"
+
 #include "chainfksolver.hpp"
 
 namespace KDL {
@@ -33,7 +35,7 @@ namespace KDL {
      *
      * @ingroup KinematicFamily
      */
-    class ChainFkSolverPos_recursive : public ChainFkSolverPos
+    class KDL_API ChainFkSolverPos_recursive : public ChainFkSolverPos
     {
     public:
         ChainFkSolverPos_recursive(const Chain& chain);

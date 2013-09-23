@@ -48,6 +48,8 @@
 #include "path_composite.hpp"
 #include "rotational_interpolation.hpp"
 
+#include "kdl-config.h"
+
 namespace KDL {
 
 /**
@@ -55,7 +57,7 @@ namespace KDL {
  *
  * @ingroup Motion
  */
-class Path_RoundedComposite : public Path
+class KDL_API Path_RoundedComposite : public Path
 	{
 		/** a Path_Composite is aggregated to hold the rounded trajectory
 		 * with circles and lines

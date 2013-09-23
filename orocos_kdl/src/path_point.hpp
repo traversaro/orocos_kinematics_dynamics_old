@@ -49,6 +49,8 @@
 #include "path.hpp"
 #include "rotational_interpolation.hpp"
 
+#include "kdl-config.h"
+
 
 namespace KDL {
 
@@ -58,7 +60,7 @@ namespace KDL {
  * A Path consisting only of a point in space.
  * @ingroup Motion
  */
-class Path_Point : public Path
+class KDL_API Path_Point : public Path
 	{
 		Frame F_base_start;
 	public:

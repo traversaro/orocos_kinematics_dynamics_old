@@ -30,6 +30,7 @@
  *                                                                         *
  ***************************************************************************/
 
+#include "kdl-config.h"
 
 #include "chainiksolver.hpp"
 #include "chain.hpp"
@@ -61,7 +62,7 @@ namespace KDL
 
  * \ingroup KinematicFamily
  */
-class ChainIkSolverPos_LMA : public KDL::ChainIkSolverPos
+class KDL_API ChainIkSolverPos_LMA : public KDL::ChainIkSolverPos
 {
 private:
 	typedef double ScalarType;

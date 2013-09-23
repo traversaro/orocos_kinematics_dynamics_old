@@ -22,6 +22,8 @@
 #ifndef KDL_CHAIN_IKSOLVER_HPP
 #define KDL_CHAIN_IKSOLVER_HPP
 
+#include "kdl-config.h"
+
 #include "chain.hpp"
 #include "frames.hpp"
 #include "framevel.hpp"
@@ -38,7 +40,7 @@ namespace KDL {
      *
      * @ingroup KinematicFamily
      */
-    class ChainIkSolverPos {
+    class KDL_API ChainIkSolverPos {
     public:
         /**
          * Calculate inverse position kinematics, from cartesian
@@ -61,7 +63,7 @@ namespace KDL {
      *
      * @ingroup KinematicFamily
      */
-    class ChainIkSolverVel {
+    class KDL_API ChainIkSolverVel {
     public:
         /**
          * Calculate inverse velocity kinematics, from joint positions
@@ -97,7 +99,7 @@ namespace KDL {
      * @ingroup KinematicFamily
      */
 
-    class ChainIkSolverAcc {
+    class KDL_API ChainIkSolverAcc {
     public:
         /**
          * Calculate inverse acceleration kinematics from joint

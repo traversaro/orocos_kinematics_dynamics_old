@@ -50,6 +50,8 @@
 #include "path.hpp"
 #include "velocityprofile.hpp"
 
+#include "kdl-config.h"
+
 
 namespace KDL {
 
@@ -59,7 +61,7 @@ namespace KDL {
 	 * trajectory
 	 * @ingroup Motion
 	 */
-	class Trajectory_Segment :  public Trajectory
+	class KDL_API Trajectory_Segment :  public Trajectory
 	{
 		VelocityProfile* motprof;
 		Path*      geom;

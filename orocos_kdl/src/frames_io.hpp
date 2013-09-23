@@ -76,6 +76,8 @@
 #ifndef FRAMES_IO_H
 #define FRAMES_IO_H
 
+#include "kdl-config.h"
+
 #include "utilities/utility_io.h"
 #include "frames.hpp"
 #include "jntarray.hpp"
@@ -88,25 +90,25 @@ namespace KDL {
 
 
     // I/O to C++ stream.
-    std::ostream& operator << (std::ostream& os,const Vector& v);
-    std::ostream& operator << (std::ostream& os,const Rotation& R);
-    std::ostream& operator << (std::ostream& os,const Frame& T);
-    std::ostream& operator << (std::ostream& os,const Twist& T);
-    std::ostream& operator << (std::ostream& os,const Wrench& T);
-    std::ostream& operator << (std::ostream& os,const Vector2& v);
-    std::ostream& operator << (std::ostream& os,const Rotation2& R);
-    std::ostream& operator << (std::ostream& os,const Frame2& T);
+    KDL_API std::ostream& operator << (std::ostream& os,const Vector& v);
+    KDL_API std::ostream& operator << (std::ostream& os,const Rotation& R);
+    KDL_API std::ostream& operator << (std::ostream& os,const Frame& T);
+    KDL_API std::ostream& operator << (std::ostream& os,const Twist& T);
+    KDL_API std::ostream& operator << (std::ostream& os,const Wrench& T);
+    KDL_API std::ostream& operator << (std::ostream& os,const Vector2& v);
+    KDL_API std::ostream& operator << (std::ostream& os,const Rotation2& R);
+    KDL_API std::ostream& operator << (std::ostream& os,const Frame2& T);
 
 
 
-    std::istream& operator >> (std::istream& is,Vector& v);
-    std::istream& operator >> (std::istream& is,Rotation& R);
-    std::istream& operator >> (std::istream& is,Frame& T);
-    std::istream& operator >> (std::istream& os,Twist& T);
-    std::istream& operator >> (std::istream& os,Wrench& T);
-    std::istream& operator >> (std::istream& is,Vector2& v);
-    std::istream& operator >> (std::istream& is,Rotation2& R);
-    std::istream& operator >> (std::istream& is,Frame2& T);
+    KDL_API std::istream& operator >> (std::istream& is,Vector& v);
+    KDL_API std::istream& operator >> (std::istream& is,Rotation& R);
+    KDL_API std::istream& operator >> (std::istream& is,Frame& T);
+    KDL_API std::istream& operator >> (std::istream& os,Twist& T);
+    KDL_API std::istream& operator >> (std::istream& os,Wrench& T);
+    KDL_API std::istream& operator >> (std::istream& is,Vector2& v);
+    KDL_API std::istream& operator >> (std::istream& is,Rotation2& R);
+    KDL_API std::istream& operator >> (std::istream& is,Frame2& T);
 
 
 } // namespace Frame

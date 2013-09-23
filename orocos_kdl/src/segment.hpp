@@ -28,6 +28,8 @@
 #include "joint.hpp"
 #include <vector>
 
+#include "kdl-config.h"
+
 namespace KDL {
 
     /**
@@ -43,7 +45,7 @@ namespace KDL {
      *
      * @ingroup KinematicFamily
      */
-    class Segment {
+    class KDL_API Segment {
         friend class Chain;
     private:
         std::string name;

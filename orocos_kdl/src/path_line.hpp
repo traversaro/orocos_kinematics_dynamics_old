@@ -48,6 +48,7 @@
 #include "path.hpp"
 #include "rotational_interpolation.hpp"
 
+#include "kdl-config.h"
 
 namespace KDL {
 
@@ -56,7 +57,7 @@ namespace KDL {
 	 * A path representing a line from A to B.
 	 * @ingroup Motion
 	 */
-class Path_Line : public Path
+class KDL_API Path_Line : public Path
 	{
 		// Orientatie gedeelte
 		RotationalInterpolation* orient;

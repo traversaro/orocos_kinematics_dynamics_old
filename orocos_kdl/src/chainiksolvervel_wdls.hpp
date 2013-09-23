@@ -22,6 +22,8 @@
 #ifndef KDL_CHAIN_IKSOLVERVEL_WDLS_HPP
 #define KDL_CHAIN_IKSOLVERVEL_WDLS_HPP
 
+#include "kdl-config.h"
+
 #include "chainiksolver.hpp"
 #include "chainjnttojacsolver.hpp"
 #include <Eigen/Core>
@@ -60,7 +62,7 @@ namespace KDL
      *
      * @ingroup KinematicFamily
      */
-    class ChainIkSolverVel_wdls : public ChainIkSolverVel
+    class KDL_API ChainIkSolverVel_wdls : public ChainIkSolverVel
     {
     public:
         /**

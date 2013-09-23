@@ -49,6 +49,9 @@
 #include "path.hpp"
 #include <vector>
 
+#include "kdl-config.h"
+
+
 namespace KDL {
 
 	 /**
@@ -66,7 +69,7 @@ namespace KDL {
 	  *
 	  * @ingroup Motion
 	  */
-	 class Path_Composite : public Path
+	 class KDL_API Path_Composite : public Path
 	{
 		typedef std::vector< std::pair<Path*,bool> > PathVector;
 		typedef std::vector<double>    DoubleVector;

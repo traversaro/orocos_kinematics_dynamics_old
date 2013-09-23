@@ -22,6 +22,8 @@
 #ifndef KDL_JNTARRAY_HPP
 #define KDL_JNTARRAY_HPP
 
+#include "kdl-config.h"
+
 #include "frames.hpp"
 #include "jacobian.hpp"
 
@@ -66,7 +68,7 @@ class MyTask : public RTT::TaskContext
 
      */	
 
-    class JntArray
+    class KDL_API JntArray
     {
     public:
         Eigen::VectorXd data;
@@ -147,7 +149,7 @@ class MyTask : public RTT::TaskContext
         //friend bool operator!=(const JntArray& src1,const JntArray& src2);
         };
 
-    bool operator==(const JntArray& src1,const JntArray& src2);
+    KDL_API bool operator==(const JntArray& src1,const JntArray& src2);
     //bool operator!=(const JntArray& src1,const JntArray& src2);
 
     /**
@@ -159,7 +161,7 @@ class MyTask : public RTT::TaskContext
      * @param src2 B
      * @param dest C
      */
-    void Add(const JntArray& src1,const JntArray& src2,JntArray& dest);
+    KDL_API void Add(const JntArray& src1,const JntArray& src2,JntArray& dest);
     /**
      * Function to subtract two joint arrays, all the arguments must
      * have the same size: A - B = C. This function is
@@ -169,7 +171,7 @@ class MyTask : public RTT::TaskContext
      * @param src2 B
      * @param dest C
      */
-    void Subtract(const JntArray& src1,const JntArray& src2,JntArray& dest);
+    KDL_API void Subtract(const JntArray& src1,const JntArray& src2,JntArray& dest);
     /**
      * Function to multiply all the array values with a scalar
      * factor: A*b=C. This function is aliasing-safe, A can be the
@@ -179,7 +181,7 @@ class MyTask : public RTT::TaskContext
      * @param factor b
      * @param dest C
      */
-    void Multiply(const JntArray& src,const double& factor,JntArray& dest);
+    KDL_API void Multiply(const JntArray& src,const double& factor,JntArray& dest);
     /**
      * Function to divide all the array values with a scalar
      * factor: A/b=C. This function is aliasing-safe, A can be the
@@ -189,7 +191,7 @@ class MyTask : public RTT::TaskContext
      * @param factor b
      * @param dest C
      */
-    void Divide(const JntArray& src,const double& factor,JntArray& dest);
+    KDL_API void Divide(const JntArray& src,const double& factor,JntArray& dest);
     /**
      * Function to multiply a KDL::Jacobian with a KDL::JntArray
      * to get a KDL::Twist, it should not be used to calculate the
@@ -202,13 +204,13 @@ class MyTask : public RTT::TaskContext
      * @param dest t
      * @post dest==Twist::Zero() if 0==src.rows() (ie src is empty)
      */
-    void MultiplyJacobian(const Jacobian& jac, const JntArray& src, Twist& dest);
+    KDL_API void MultiplyJacobian(const Jacobian& jac, const JntArray& src, Twist& dest);
     /**
      * Function to set all the values of the array to 0
      *
      * @param array
      */
-    void SetToZero(JntArray& array);
+    KDL_API void SetToZero(JntArray& array);
     /**
      * Function to check if two arrays are the same with a
      *precision of eps
@@ -219,7 +221,7 @@ class MyTask : public RTT::TaskContext
      * @return true if each element of src1 is within eps of the same
      * element in src2, or if both src1 and src2 have no data (ie 0==rows())
      */
-    bool Equal(const JntArray& src1,const JntArray& src2,double eps=epsilon);
+    KDL_API bool Equal(const JntArray& src1,const JntArray& src2,double eps=epsilon);
 
 }
 

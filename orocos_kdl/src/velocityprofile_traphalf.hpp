@@ -48,7 +48,7 @@
 
 #include "velocityprofile.hpp"
 
-
+#include "kdl-config.h"
 
 
 namespace KDL {
@@ -60,7 +60,7 @@ namespace KDL {
 	 * or ending.
 	 * @ingroup Motion
 	 */
-class VelocityProfile_TrapHalf : public VelocityProfile
+class KDL_API VelocityProfile_TrapHalf : public VelocityProfile
 	{
 		// For "running" a motion profile :
 		double a1,a2,a3; // coef. from ^0 -> ^2 of first part

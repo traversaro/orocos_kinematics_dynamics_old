@@ -22,6 +22,8 @@
 #ifndef KDL_ARTICULATEDBODYINERTIA_HPP
 #define KDL_ARTICULATEDBODYINERTIA_HPP
 
+#include "kdl-config.h"
+
 #include "frames.hpp"
 
 #include "rotationalinertia.hpp"
@@ -37,7 +39,7 @@ namespace KDL {
      *	The inertia is defined in a certain reference point and a certain reference base.
      *	The reference point does not have to coincide with the origin of the reference frame.
      */
-    class ArticulatedBodyInertia{
+    class KDL_API ArticulatedBodyInertia{
     public:
 
         /**

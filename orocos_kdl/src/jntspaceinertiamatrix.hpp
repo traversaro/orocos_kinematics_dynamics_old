@@ -22,6 +22,9 @@
 #ifndef KDL_JNTSPACEINERTIAMATRIX_HPP
 #define KDL_JNTSPACEINERTIAMATRIX_HPP
 
+#include "kdl-config.h"
+
+
 #include "frames.hpp"
 #include "jacobian.hpp"
 #include "jntarray.hpp"
@@ -67,7 +70,7 @@ class MyTask : public RTT::TaskContext
 
      */	
 
-    class JntSpaceInertiaMatrix
+    class KDL_API JntSpaceInertiaMatrix
     {
     public:
         Eigen::MatrixXd data;
@@ -209,7 +212,8 @@ class MyTask : public RTT::TaskContext
         //friend bool operator!=(const JntSpaceInertiaMatrix& src1,const JntSpaceInertiaMatrix& src2);
         };
 
-    bool operator==(const JntSpaceInertiaMatrix& src1,const JntSpaceInertiaMatrix& src2);
+    
+    KDL_API bool operator==(const JntSpaceInertiaMatrix& src1,const JntSpaceInertiaMatrix& src2);
     //bool operator!=(const JntSpaceInertiaMatrix& src1,const JntSpaceInertiaMatrix& src2);
 
 }

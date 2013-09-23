@@ -29,6 +29,8 @@
 #include <vector>
 #include <string>
 
+#include "kdl-config.h"
+
 namespace KDL {
 
 /**
@@ -39,7 +41,7 @@ namespace KDL {
  *
  * @ingroup KinematicFamily
  */
-class TreeIkSolverPos_NR_JL: public TreeIkSolverPos {
+class KDL_API TreeIkSolverPos_NR_JL: public TreeIkSolverPos {
 public:
     /**
      * Constructor of the solver, it needs the tree, a forward

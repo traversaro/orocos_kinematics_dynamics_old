@@ -47,6 +47,8 @@
 #include "frames.hpp"
 #include "frames_io.hpp"
 
+#include "kdl-config.h"
+
 namespace KDL {
 
 /**
@@ -59,7 +61,7 @@ namespace KDL {
  *   object is responsible for setting these each time
  * @ingroup Motion
  */
-class RotationalInterpolation
+class KDL_API RotationalInterpolation
 	{
 	public:
 		/**

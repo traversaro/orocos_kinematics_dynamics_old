@@ -26,6 +26,8 @@
 
 #include "rotationalinertia.hpp"
 
+#include "kdl-config.h"
+
 namespace KDL {
     
     /**
@@ -34,7 +36,7 @@ namespace KDL {
      *	The inertia is defined in a certain reference point and a certain reference base.
      *	The reference point does not have to coincide with the origin of the reference frame.
      */
-    class RigidBodyInertia{
+    class KDL_API RigidBodyInertia{
     public:
         
         /**

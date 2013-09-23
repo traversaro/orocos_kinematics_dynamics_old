@@ -18,6 +18,8 @@
 
 #include "trajectory.hpp"
 
+#include "kdl-config.h"
+
 
 namespace KDL {
   /**
@@ -25,7 +27,7 @@ namespace KDL {
    * for an amount of time.
    * @ingroup Motion
    */
-	class Trajectory_Stationary : public Trajectory
+	class KDL_API Trajectory_Stationary : public Trajectory
 	  {
 		double duration;
 		Frame pos;

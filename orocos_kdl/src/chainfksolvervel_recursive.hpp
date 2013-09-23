@@ -22,6 +22,8 @@
 #ifndef KDL_CHAIN_FKSOLVERVEL_RECURSIVE_HPP
 #define KDL_CHAIN_FKSOLVERVEL_RECURSIVE_HPP
 
+#include "kdl-config.h"
+
 #include "chainfksolver.hpp"
 
 namespace KDL
@@ -34,7 +36,7 @@ namespace KDL
      *
      * @ingroup KinematicFamily
      */
-    class ChainFkSolverVel_recursive : public ChainFkSolverVel
+    class KDL_API ChainFkSolverVel_recursive : public ChainFkSolverVel
     {
     public:
         ChainFkSolverVel_recursive(const Chain& chain);

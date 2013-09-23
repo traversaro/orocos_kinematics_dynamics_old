@@ -3,13 +3,15 @@
 
 #include "velocityprofile.hpp"
 
+#include "kdl-config.h"
+
 namespace KDL
 {
 	/**
 	 * \brief A spline VelocityProfile trajectory interpolation.
 	 * @ingroup Motion
 	 */
-class VelocityProfile_Spline : public VelocityProfile
+class KDL_API VelocityProfile_Spline : public VelocityProfile
 {
 public:
     VelocityProfile_Spline();

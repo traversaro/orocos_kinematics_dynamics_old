@@ -22,6 +22,8 @@
 #ifndef KDL_CHAIN_FKSOLVER_HPP
 #define KDL_CHAIN_FKSOLVER_HPP
 
+#include "kdl-config.h"
+
 #include "chain.hpp"
 #include "framevel.hpp"
 #include "frameacc.hpp"
@@ -39,7 +41,7 @@ namespace KDL {
      */
 
     //Forward definition
-    class ChainFkSolverPos {
+    class KDL_API ChainFkSolverPos {
     public:
         /**
          * Calculate forward position kinematics for a KDL::Chain,
@@ -60,7 +62,7 @@ namespace KDL {
      *
      * @ingroup KinematicFamily
      */
-    class ChainFkSolverVel {
+    class KDL_API ChainFkSolverVel {
     public:
         /**
          * Calculate forward position and velocity kinematics, from
@@ -83,7 +85,7 @@ namespace KDL {
      * @ingroup KinematicFamily
      */
 
-    class ChainFkSolverAcc {
+    class KDL_API ChainFkSolverAcc {
     public:
         /**
          * Calculate forward position, velocity and accelaration

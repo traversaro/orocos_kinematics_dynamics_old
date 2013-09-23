@@ -31,6 +31,7 @@
 
 #include "velocityprofile.hpp"
 
+#include "kdl-config.h"
 
 namespace KDL {
 	/**
@@ -45,7 +46,7 @@ namespace KDL {
 	 * Duration() == 0;
 	 * @ingroup Motion
 	 */
-	class VelocityProfile_Dirac : public VelocityProfile
+	class KDL_API VelocityProfile_Dirac : public VelocityProfile
 	{
 		double p1,p2,t;
 	public:

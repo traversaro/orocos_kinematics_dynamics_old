@@ -22,6 +22,8 @@
 #ifndef KDL_JOINT_HPP
 #define KDL_JOINT_HPP
 
+#include "kdl-config.h"
+
 #include "frames.hpp"
 #include <string>
 #include <exception>
@@ -42,7 +44,7 @@ namespace KDL {
      *
      * @ingroup KinematicFamily
      */
-    class Joint {
+    class KDL_API Joint {
     public:
         typedef enum { RotAxis,RotX,RotY,RotZ,TransAxis,TransX,TransY,TransZ,None} JointType;
         /**

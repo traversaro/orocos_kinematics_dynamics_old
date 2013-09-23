@@ -22,6 +22,8 @@
 #ifndef KDLCHAINDYNPARAM_HPP
 #define KDLCHAINDYNPARAM_HPP
 
+#include "kdl-config.h"
+
 #include "chainidsolver_recursive_newton_euler.hpp"
 #include "articulatedbodyinertia.hpp"
 #include "jntspaceinertiamatrix.hpp"
@@ -43,7 +45,7 @@ namespace KDL {
      * (expressed in the segments reference frame) and the dynamical
      * parameters of the segments.
      */
-    class ChainDynParam
+    class KDL_API ChainDynParam
     {
     public:
         ChainDynParam(const Chain& chain, Vector _grav);

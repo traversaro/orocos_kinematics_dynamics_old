@@ -48,6 +48,7 @@
 #include "frames_io.hpp"
 #include "rotational_interpolation.hpp"
 
+#include "kdl-config.h"
 
 namespace KDL {
 
@@ -60,7 +61,7 @@ namespace KDL {
 	  * to try to interpolate a 180 degrees rotation.
 	  * @ingroup Motion
 	  */
-class RotationalInterpolation_SingleAxis: public RotationalInterpolation
+class KDL_API RotationalInterpolation_SingleAxis: public RotationalInterpolation
 	{
 		Rotation R_base_start;
 		Rotation R_base_end;

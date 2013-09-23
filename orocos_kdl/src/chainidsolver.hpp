@@ -22,6 +22,8 @@
 #ifndef KDL_CHAIN_IDSOLVER_HPP
 #define KDL_CHAIN_IDSOLVER_HPP
 
+#include "kdl-config.h"
+
 #include "chain.hpp"
 #include "frames.hpp"
 #include "jntarray.hpp"
@@ -36,7 +38,7 @@ namespace KDL
 	 * dynamics solver for a KDL::Chain.
 	 *
 	 */
-	class ChainIdSolver
+	class KDL_API ChainIdSolver
 	{
 		public:
 			/** 

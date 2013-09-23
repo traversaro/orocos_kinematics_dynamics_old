@@ -22,12 +22,14 @@
 #ifndef KDL_JACOBIAN_HPP
 #define KDL_JACOBIAN_HPP
 
+#include "kdl-config.h"
+
 #include "frames.hpp"
 #include <Eigen/Core>
 
 namespace KDL
 {
-    class Jacobian
+    class KDL_API Jacobian
     {
     public:
 
@@ -72,9 +74,9 @@ namespace KDL
 
     };
 
-    bool changeRefPoint(const Jacobian& src1, const Vector& base_AB, Jacobian& dest);
-    bool changeBase(const Jacobian& src1, const Rotation& rot, Jacobian& dest);
-    bool changeRefFrame(const Jacobian& src1,const Frame& frame, Jacobian& dest);
+    KDL_API bool changeRefPoint(const Jacobian& src1, const Vector& base_AB, Jacobian& dest);
+    KDL_API bool changeBase(const Jacobian& src1, const Rotation& rot, Jacobian& dest);
+    KDL_API bool changeRefFrame(const Jacobian& src1,const Frame& frame, Jacobian& dest);
 
 
 }

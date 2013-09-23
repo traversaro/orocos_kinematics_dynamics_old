@@ -22,6 +22,8 @@
 #ifndef KDL_JNTARRAYVEL_HPP
 #define KDL_JNTARRAYVEL_HPP
 
+#include "kdl-config.h"
+
 #include "utilities/utility.h"
 #include "jntarray.hpp"
 #include "framevel.hpp"
@@ -29,7 +31,7 @@
 namespace KDL
 {
 
-    class JntArrayVel
+    class KDL_API JntArrayVel
     {
     public:
         JntArray q;

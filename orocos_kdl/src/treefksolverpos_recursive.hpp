@@ -25,6 +25,8 @@
 
 #include "treefksolver.hpp"
 
+#include "kdl-config.h"
+
 namespace KDL {
 
     /**
@@ -34,7 +36,7 @@ namespace KDL {
      *
      * @ingroup KinematicFamily
      */
-    class TreeFkSolverPos_recursive : public TreeFkSolverPos
+    class KDL_API TreeFkSolverPos_recursive : public TreeFkSolverPos
     {
     public:
         TreeFkSolverPos_recursive(const Tree& tree);

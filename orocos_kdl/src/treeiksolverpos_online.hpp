@@ -30,6 +30,8 @@
 #include "treeiksolver.hpp"
 #include "treefksolver.hpp"
 
+#include "kdl-config.h"
+
 namespace KDL {
 
 /**
@@ -41,7 +43,7 @@ namespace KDL {
  *
  * @ingroup KinematicFamily
  */
-class TreeIkSolverPos_Online: public TreeIkSolverPos {
+class KDL_API TreeIkSolverPos_Online: public TreeIkSolverPos {
 public:
     /**
      * Constructor of the solver, it needs the number of joints of the tree, a list of the endpoints

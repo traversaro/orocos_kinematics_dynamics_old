@@ -50,12 +50,14 @@
 
 #include "frames_io.hpp"
 
+#include "kdl-config.h"
+
 namespace KDL {
 
 /**
  * The specification of the path of a trajectory.
  */
-class Path
+class KDL_API Path
 	{
 	public:
 		enum IdentifierType {

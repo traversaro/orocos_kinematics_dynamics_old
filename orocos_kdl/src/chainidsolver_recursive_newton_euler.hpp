@@ -22,6 +22,8 @@
 #ifndef KDL_CHAIN_IKSOLVER_RECURSIVE_NEWTON_EULER_HPP
 #define KDL_CHAIN_IKSOLVER_RECURSIVE_NEWTON_EULER_HPP
 
+#include "kdl-config.h"
+
 #include "chainidsolver.hpp"
 
 namespace KDL{
@@ -37,7 +39,7 @@ namespace KDL{
      * (expressed in the segments reference frame) and the dynamical
      * parameters of the segments.
      */
-    class ChainIdSolver_RNE : public ChainIdSolver{
+    class KDL_API ChainIdSolver_RNE : public ChainIdSolver{
     public:
         /**
          * Constructor for the solver, it will allocate all the necessary memory

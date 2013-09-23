@@ -22,6 +22,8 @@
 #ifndef KDL_JNTARRAYACC_HPP
 #define KDL_JNTARRAYACC_HPP
 
+#include "kdl-config.h"
+
 #include "utilities/utility.h"
 #include "jntarray.hpp"
 #include "jntarrayvel.hpp"
@@ -29,7 +31,7 @@
 
 namespace KDL
 {
-    class JntArrayAcc
+    class KDL_API JntArrayAcc
     {
     public:
         JntArray q;

@@ -29,6 +29,7 @@
 #ifndef RRFRAMES_H
 #define RRFRAMES_H
 
+#include "kdl-config.h"
 
 #include "utilities/rall2d.h"
 #include "frames.hpp"
@@ -41,7 +42,7 @@ class TwistAcc;
 typedef Rall2d<double,double,double> doubleAcc;
 
 
-class VectorAcc
+class KDL_API VectorAcc
 {
 public:
     Vector p;   //!< position vector
@@ -90,7 +91,7 @@ public:
 
 
 
-class RotationAcc
+class KDL_API RotationAcc
 {
 public:
     Rotation R;     //!< rotation matrix
@@ -145,7 +146,7 @@ public:
 
 
 
-class FrameAcc
+class KDL_API FrameAcc
 {
 public:
     RotationAcc M;   //!< Rotation,angular velocity, and angular acceleration of frame.
@@ -189,7 +190,7 @@ public:
 
 
 //very similar to Wrench class.
-class TwistAcc
+class KDL_API TwistAcc
 {
 public:
     VectorAcc vel;       //!< translational velocity and its 1st and 2nd derivative

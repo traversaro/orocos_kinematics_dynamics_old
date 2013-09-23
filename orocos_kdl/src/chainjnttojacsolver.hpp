@@ -22,6 +22,8 @@
 #ifndef KDL_CHAINJNTTOJACSOLVER_HPP
 #define KDL_CHAINJNTTOJACSOLVER_HPP
 
+#include "kdl-config.h"
+
 #include "frames.hpp"
 #include "jacobian.hpp"
 #include "jntarray.hpp"
@@ -37,7 +39,7 @@ namespace KDL
      *
      */
 
-    class ChainJntToJacSolver
+    class KDL_API ChainJntToJacSolver
     {
     public:
         explicit ChainJntToJacSolver(const Chain& chain);

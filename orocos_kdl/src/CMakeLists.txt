@@ -4,11 +4,7 @@ FILE( GLOB KDL_HPPS [^.]*.hpp [^.]*.inl)
 FILE( GLOB UTIL_SRCS utilities/[^.]*.cpp utilities/[^.]*.cxx)
 FILE( GLOB UTIL_HPPS utilities/[^.]*.h utilities/[^.]*.hpp)
 
-if(MSVC)
-    set(LIB_TYPE STATIC)
-else()
-    set(LIB_TYPE SHARED)
-endif()
+set(LIB_TYPE SHARED)
 
 ADD_LIBRARY(orocos-kdl ${LIB_TYPE} ${KDL_SRCS} ${UTIL_SRCS})
 SET_TARGET_PROPERTIES( orocos-kdl

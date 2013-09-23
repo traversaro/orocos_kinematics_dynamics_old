@@ -22,6 +22,8 @@
 #ifndef KDL_CHAIN_IKSOLVERVEL_PINV_NSO_HPP
 #define KDL_CHAIN_IKSOLVERVEL_PINV_NSO_HPP
 
+#include "kdl-config.h"
+
 #include "chainiksolver.hpp"
 #include "chainjnttojacsolver.hpp"
 #include "utilities/svd_HH.hpp"
@@ -43,7 +45,7 @@ namespace KDL
      *
      * @ingroup KinematicFamily
      */
-    class ChainIkSolverVel_pinv_nso : public ChainIkSolverVel
+    class KDL_API ChainIkSolverVel_pinv_nso : public ChainIkSolverVel
     {
     public:
         /**

@@ -12,9 +12,11 @@
 #include "jacobian.hpp"
 #include "jntarray.hpp"
 
+#include "kdl-config.h"
+
 namespace KDL {
 
-class TreeJntToJacSolver {
+class KDL_API TreeJntToJacSolver {
 public:
     explicit TreeJntToJacSolver(const Tree& tree);
 

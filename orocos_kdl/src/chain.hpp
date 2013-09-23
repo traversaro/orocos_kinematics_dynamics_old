@@ -22,6 +22,8 @@
 #ifndef KDL_CHAIN_HPP
 #define KDL_CHAIN_HPP
 
+#include "kdl-config.h"
+
 #include "segment.hpp"
 #include <string>
 
@@ -32,7 +34,7 @@ namespace KDL {
      *
      * @ingroup KinematicFamily
      */
-    class Chain {
+    class KDL_API Chain {
     private:
         int nrOfJoints;
         int nrOfSegments;

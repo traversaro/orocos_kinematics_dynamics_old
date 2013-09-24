@@ -52,9 +52,9 @@ endif(MSVC)
 find_package(Eigen 3.0 QUIET)
 if(NOT Eigen_DIR)
 include(${PROJ_SOURCE_DIR}/config/FindEigen3.cmake)
-include_DIRECTORIES(${EIGEN3_INCLUDE_DIR})
+include_DIRECTORIES("${EIGEN3_INCLUDE_DIR}")
 endif()
-INCLUDE_DIRECTORIES(${EIGEN_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES("${EIGEN3_INCLUDE_DIR}")
 
 INCLUDE (${PROJ_SOURCE_DIR}/config/DependentOption.cmake)
 
@@ -90,8 +90,10 @@ CONFIGURE_FILE(
   "${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
   IMMEDIATE @ONLY)
-
+  
 INSTALL(EXPORT orocos-kdl-target DESTINATION  share/orocos-kdl)
+
+
 CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/KDLConfig.cmake.in
   ${CMAKE_CURRENT_BINARY_DIR}/orocos-kdl-config.cmake @ONLY)
 INSTALL(FILES ${CMAKE_CURRENT_BINARY_DIR}/orocos-kdl-config.cmake DESTINATION share/orocos-kdl)

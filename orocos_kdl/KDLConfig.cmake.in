@@ -13,10 +13,10 @@ if(NOT Orocos-KDL_FOUND)
   set(Orocos-KDL_VERSION_MINOR "@KDL_VERSION_MINOR@")
   set(Orocos-KDL_VERSION_PATCH "@KDL_VERSION_PATCH@")
 
-  set(Orocos-KDL_INCLUDE_DIRS "@CMAKE_INSTALL_PREFIX@/include" "${Eigen3_INCLUDE_DIR}" )
+  set(Orocos-KDL_INCLUDE_DIRS "@CMAKE_INSTALL_PREFIX@/include" "@EIGEN3_INCLUDE_DIR@" )
   set(Orocos-KDL_LIBRARY_DIRS "@CMAKE_INSTALL_PREFIX@/lib" )
   set(Orocos-KDL_LIBRARIES orocos-kdl)
-  include(${CMAKE_CURRENT_LIST_DIR}/orocos-kdl-target.cmake)
+  include(@CMAKE_INSTALL_PREFIX@/share/orocos-kdl/orocos-kdl-target.cmake)
   set(Orocos-KDL_FOUND TRUE)
 
 endif(NOT Orocos-KDL_FOUND)
